@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fce7f3"/>
+    </linearGradient>
+    <radialGradient id="sunGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="600" height="450" fill="url(#bgGrad)" rx="16"/>
+  <rect width="600" height="450" fill="url(#sunGlow)"/>
+
+  <!-- Subtle Vignette Frame -->
+  <rect x="15" y="15" width="570" height="420" rx="12" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="4 4"/>
+
+  <!-- Decorative Botanical & Geometric Accents -->
+  <circle cx="500" cy="80" r="45" fill="#ffffff" fill-opacity="0.08"/>
+  <circle cx="100" cy="380" r="70" fill="#ffffff" fill-opacity="0.06"/>
+  <path d="M40 50 Q 80 40 100 80 T 140 120" stroke="#ffffff" stroke-opacity="0.2" fill="none" stroke-width="1.5"/>
+  <path d="M560 400 Q 520 410 500 370 T 460 330" stroke="#ffffff" stroke-opacity="0.2" fill="none" stroke-width="1.5"/>
+
+  <!-- Central Symbol -->
+  <g transform="translate(300, 180)" filter="url(#softGlow)">
+    <circle cx="0" cy="0" r="54" fill="#ffffff" fill-opacity="0.25"/>
+    <circle cx="0" cy="0" r="44" fill="#ffffff" fill-opacity="0.4"/>
+    <text x="0" y="16" font-size="44" text-anchor="middle" fill="#4a1525" opacity="0.85">📖</text>
+  </g>
+
+  <!-- Title & Subtitle in SVG Typography -->
+  <text x="300" y="280" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="600" fill="#3b0d19" text-anchor="middle" letter-spacing="0.5">
+    Bookshop Hideaway
+  </text>
+  <text x="300" y="315" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="15" font-weight="400" fill="#541424" opacity="0.85" text-anchor="middle" font-style="italic">
+    "Whispering poetry recommendations in quiet aisles"
+  </text>
+  <text x="300" y="348" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="12" font-weight="600" fill="#93223f" opacity="0.7" text-anchor="middle" letter-spacing="1.5">
+    • 2026-02-14 •
+  </text>
+</svg>
